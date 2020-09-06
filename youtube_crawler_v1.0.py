@@ -18,6 +18,10 @@ mkv 확장자로 했을때 소리 나옴
 https://www.youtube.com/playlist?list=블라블라
 이런식으로 끝에 플레이리스트 주소를 넣으면 모든 리스트 다운 받음
 
+[사용추천]
+youtube-dl -f 137+140 https://www.youtube.com/watch?v=Jg5wkZ-dJXA
+이렇게도 가능 , 이런식으로 하면 mp4로도 잘 merge 됨
+
 format code extension resolution  note
 140         m4a       audio only  DASH audio , audio@128k (worst)
 160         mp4       144p        DASH video , video only
