@@ -1,4 +1,6 @@
 '''
+source activate my_env
+
 conda install -c conda-forge youtube-dl
 conda install -c conda-forge ffmpeg
 
@@ -9,7 +11,8 @@ youtube-dl -f bestvideo[height=1080]+bestaudio --merge-output-format mkv [다운
 위의 명령어는 1080 화질로 그냥 받으면 소리가 안나오는 파일이 오기때문에
 소리 파일을 따로 받아서 merge하는 것!
 
-youtube-dl -f bestvideo[height=1080]+bestaudio --merge-output-format mkv -o './download_video/%(title)s.%(ext)s' https://www.youtube.com/watch?v=Jg5wkZ-dJXA
+youtube-dl -f bestvideo[height=1080]+bestaudio --merge-output-format mkv -o './download_video/%(title)s.%(ext)s' https://www.youtube.com/watch?v=Pnz9h33LvdE
+
 -o './download_video/%(title)s.%(ext)s'
 이 명령어가 다운로드 위치 지정 옵션
 mp4 확장자로 했을때 소리 안나옴
@@ -19,7 +22,7 @@ https://www.youtube.com/playlist?list=블라블라
 이런식으로 끝에 플레이리스트 주소를 넣으면 모든 리스트 다운 받음
 
 [사용추천]
-youtube-dl -f 137+140 https://www.youtube.com/watch?v=Jg5wkZ-dJXA
+youtube-dl -f 137+140 -o './download_video/%(title)s.%(ext)s' https://www.youtube.com/watch?v=Jg5wkZ-dJXA
 이렇게도 가능 , 이런식으로 하면 mp4로도 잘 merge 됨
 
 format code extension resolution  note
