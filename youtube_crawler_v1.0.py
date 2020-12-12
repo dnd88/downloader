@@ -22,8 +22,11 @@ https://www.youtube.com/playlist?list=블라블라
 이런식으로 끝에 플레이리스트 주소를 넣으면 모든 리스트 다운 받음
 
 [사용추천]
-youtube-dl -f 137+140 -o './download_video/%(title)s.%(ext)s' https://www.youtube.com/watch?v=Jg5wkZ-dJXA
+youtube-dl -f 137+140 -o './download_video/%(title)s.%(ext)s' https://www.youtube.com/playlist?list=PLtKvrJm1v37KUgodxA8Satr3A5E5LzjAm
 이렇게도 가능 , 이런식으로 하면 mp4로도 잘 merge 됨
+
+[720이 최대일: 1080으로 요청하면 ERROR: requested format not available 라고 뜸]
+youtube-dl -f 136+140 -o './download_video/%(title)s.%(ext)s'
 
 format code extension resolution  note
 140         m4a       audio only  DASH audio , audio@128k (worst)
@@ -38,6 +41,16 @@ format code extension resolution  note
 43          webm      640x360
 18          mp4       640x360
 22          mp4       1280x720    (best)
+
+[pip 로 버전 업그레이드 시]
+이슈: ERROR: YPRwIeZQJ8Q: YouTube said: Unable to extract video data
+    다운로드 시도때마다 이런 에러 뜸
+    
+pip install --upgrade youtube-dl
+
+(youtube-dl --update  이렇게만 명령어 사용하면,
+It looks like you installed youtube-dl with a package manager, pip, setup.py or a tarball. Please use that to update. 이렇게 나옴)
+
 '''
 
 import os
