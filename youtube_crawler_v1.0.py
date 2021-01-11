@@ -45,11 +45,26 @@ format code extension resolution  note
 [pip 로 버전 업그레이드 시]
 이슈: ERROR: YPRwIeZQJ8Q: YouTube said: Unable to extract video data
     다운로드 시도때마다 이런 에러 뜸
-    
+
 pip install --upgrade youtube-dl
 
 (youtube-dl --update  이렇게만 명령어 사용하면,
 It looks like you installed youtube-dl with a package manager, pip, setup.py or a tarball. Please use that to update. 이렇게 나옴)
+
+[mp3파일만 받기]
+youtube-dl -x --audio-format mp3 --audio-quality 0 -o './download_video/%(title)s.%(ext)s' [down video url]
+
+--audio-quality 0 가 최고 음질
+
+[자막만 받기]
+[가능한 자막 리스트 확인]
+youtube-dl --list-subs [down video url]
+youtube-dl --write-sub --sub-lang ko --convert-subs srt -o './download_video/%(title)s.%(ext)s' --skip-download [down video url]
+
+--write-auto-sub 자동생성자막
+--write-sub 일반등록자막
+
+아직 smi 자막파일 지원안함!
 
 '''
 
