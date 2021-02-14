@@ -37,6 +37,10 @@ $ youtube-dl -f '(bestvideo+bestaudio/best)[protocol^=http]'
 --playlist-end NUMBER
 --playlist-items 1-3,7,10-13
 
+ex) $ "youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
+-o './download_video/%(title)s.%(ext)s' --playlist-start 23 --playlist-end 56 \
+https://www.youtube.com/playlist?list=PL8uzAiCio-SHQoM1yJ-jwzHHN3-4AAGWg"
+
 [720이 최대일: 1080으로 요청하면 ERROR: requested format not available 라고 뜸]
 youtube-dl -f 136+140 -o './download_video/%(title)s.%(ext)s'
 
