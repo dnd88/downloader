@@ -32,6 +32,11 @@ $ youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o '.
 # Download best format available via direct link over HTTP/HTTPS protocol
 $ youtube-dl -f '(bestvideo+bestaudio/best)[protocol^=http]'
 
+[플레이리스트에서 특정 인덱스파일만 선택하기]
+--playlist-start NUMBER
+--playlist-end NUMBER
+--playlist-items 1-3,7,10-13
+
 [720이 최대일: 1080으로 요청하면 ERROR: requested format not available 라고 뜸]
 youtube-dl -f 136+140 -o './download_video/%(title)s.%(ext)s'
 
