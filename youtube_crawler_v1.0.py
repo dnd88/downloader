@@ -25,6 +25,13 @@ https://www.youtube.com/playlist?list=블라블라
 youtube-dl -f 137+140 -o './download_video/%(title)s.%(ext)s' https://www.youtube.com/playlist?list=PLtKvrJm1v37KUgodxA8Satr3A5E5LzjAm
 이렇게도 가능 , 이런식으로 하면 mp4로도 잘 merge 됨
 
+[최대퀄리티]
+# Download best mp4 format available or any other best if no mp4 available
+$ youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o './download_video/%(title)s.%(ext)s'
+
+# Download best format available via direct link over HTTP/HTTPS protocol
+$ youtube-dl -f '(bestvideo+bestaudio/best)[protocol^=http]'
+
 [720이 최대일: 1080으로 요청하면 ERROR: requested format not available 라고 뜸]
 youtube-dl -f 136+140 -o './download_video/%(title)s.%(ext)s'
 
