@@ -101,13 +101,13 @@ youtube-dl --write-sub --sub-lang ko --convert-subs srt -o './download_video/%(t
 ### 로그인 필요시
 ```
 ex) $ youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o './download_video/%(title)s.%(ext)s' \
---cookies ./youtubecom_cookies.txt [download video url]
+--cookies ./youtube.com_cookies.txt [download video url]
 
 ex) $ youtube-dl -f 137+140 -o './download_video/%(title)s.%(ext)s' \
---cookies ./youtubecom_cookies.txt [download video url]
+--cookies ./youtube.com_cookies.txt [download video url]
 
 ex) $ youtube-dl -f best \
---cookies ./youtubecom_cookies.txt [download video url]
+--cookies ./youtube.com_cookies.txt [download video url]
 ```
 Chrome 브라우저로 해당 영상에 로그인 후 Chrome plugin Cookie.txt 를 사용하여 쿠키 파일을 만든 뒤
 --cookies /path/to/cookies/file.txt 이 flag 사용할 것
